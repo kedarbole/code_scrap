@@ -1,0 +1,259 @@
+Day 1
+
+1]   Input your name into a variable called $name and then print "Hello, <your name here>".	
+
+name='kedar'
+print("hello",name)
+
+2]   Write a program that adds two numbers and then prints out
+     whether the sum of those two numbers is positive or negative.
+
+a=int(input('enter your first no.'))
+b=int(input('enter your second no.'))
+c=a+b
+print(c)
+if (c>0):
+  print('positive')
+else:
+  print('negative')
+
+3]    Write a program that stores a number and keeps trying to get user input
+      until the user enters the number correctly. As soon as the correct number is entered, it prints: Correct!
+
+a=int(input('enter your no. here '))
+if (a>30):
+  print('correct')
+else:
+  print('enter your no. again')
+
+4]    Input your first name and last name as two separate variables, 
+      labeled as $firstname and $lastname respectively. 
+      Concatenate them together using the dot operator '.' into a new variable called $wholename. 
+      Then print out the $wholename.
+
+firstname='kedar'
+lastname='bole'
+wholename= ('{} {}' .format(firstname,lastname))
+print(wholename)
+
+or
+
+
+firstname="kedar"
+lastname="bole"
+wholename=" ".join([firstname,lastname])
+print(wholename)
+
+
+5]    Write a program to accept an input string from the user and toggle the character cases.
+      For example, $str=” Hello How Are You?”
+      O/p : hELLO hOW aRE yOU
+
+str=input('enter the string here')
+toogled=(str.swapcase())
+print(toogled)
+
+
+6]     Write a program which will perform sum and multiplication ,that sums and multiplies (respectively) all the numbers
+       in a list of numbers. For example, sum([1, 2, 3, 4]) should return 10, 
+       and multiply([1, 2, 3, 4]) should return 24.
+
+a=[1,3,7,9]
+sum=0
+mul=1
+for i in a:
+  sum+=i
+  mul*=i
+print(sum,mul)
+
+7] (doubt)    Write a program that takes a value (i.e. a number, string, etc) x and a list of values a, 
+      and returns True if x is a member of a, False otherwise. 
+      (Note that this is exactly what the in operator does, but for the sake of the exercise you should pretend 
+      Python did not have this operator.)
+
+a=int(input('enter a value'))
+lst= []
+a=int(input('enter thr no. of elements'))
+for i in range(a):
+  b=input('enter the values')
+  lst.append(b)
+
+for i in lst:
+
+  if (i==a):
+    print('match found',i)
+  else:
+    print('no match found')
+
+
+8. Write a program that has two lists and print True if they have at least one member in common, False otherwise. 
+   You may use your is_member() function, or the in operator, but for the sake of the exercise, 
+   you should (also) write it using two nested for-loops.
+
+a=[1,2,3,4]
+b=[4,5,6,7]
+
+for i in a :
+  for y in b:
+    if(i==y):
+      print(i,"true")
+    else:
+      print(i,y,'false')
+
+9]  Write a program for histogram that takes a list of integers and prints a histogram to the screen. 
+    For example, histogram([4, 9, 7]) should print the following:
+    ****
+    *********
+    *******
+
+lst=[]
+a=int(input('enter the no. of elements'))
+
+for i in range(0,a):
+  b=int(input('enter your value'))
+  lst.append(b)
+print(lst)
+
+for i in lst:
+  print('*'*i)
+
+
+10] List of athletes participated in 100m and 200m running race
+a. hundred_meters = [‘Vikay’,’John’,’Kumar’,’Rajesh’,’Malar’,’Vaihai’]
+b. two_hundred_meters = [‘Vetry’,’Petter’,’Priyanka’,’Kumar’,’Malar’]
+
+Find the answer for below question from above lists (using set and Boolean Operators)
+a. Find the athletes who participated only in 100m race
+b. Find the athletes who participated only in 200m race
+c. Find the athletes who participated both 100m and 200m race
+d. Find the athletes who participated only one race
+
+a]hm={'v','jhn','kmr','rjs','mlr','vh'}
+thn={'v','p','prk','kmr','mlr'}
+
+hm.difference(thn)
+
+b]hm={'v','jhn','kmr','rjs','mlr','vh'}
+thn={'v','p','prk','kmr','mlr'}
+
+thn.difference(hm)
+
+c]hm={'v','jhn','kmr','rjs','mlr','vh'}
+thn={'v','p','prk','kmr','mlr'}
+
+thn.intersection(hm)
+
+d] hm={'v','jhn','kmr','rjs','mlr','vh'}
+thn={'v','p','prk','kmr','mlr'}
+
+a=thn.intersection(hm)
+b= hm.union(thn)
+b.difference(a)
+
+
+11. Find the duplicate numbers from below list
+    List = [5, 8,4,18,8,55,6,8,3,18,5,3,44,]
+
+a=[5,8,4,18,8,55,6,8,3,18,5,3,44]
+b=[]
+for i in a:
+ if i not in b:
+  b.append(i)
+ else:
+   print(i)
+
+
+
+
+12. Reverse the below list without using any inbuilt keywords
+    (like reverse() or [::-1])
+List = ["cat","tiger","lion", "zebra" , "crocodile", "snack"]
+
+
+
+
+
+
+
+
+
+
+
+
+class Student:
+    def __init__(self, name,age):   #(std, tushar, 40)
+        self.fname=name                # std.fname  = "tushar"
+        self.fage=age                   # std.age  = 40
+        
+ 
+    def message(self):
+        print("hey this is a mesage", self.fname)
+ 
+std1 = Student("tushar",40)
+ 
+std1.message()
+ 
+std2 = Student("Joy",50)
+std2.message()
+
+
+
+
+
+
+
+
+
+
+
+
+4. Input your first name and last name as two separate variables,
+ labeled as $firstname and $lastname respectively.
+Concatenate them together using the dot operator '.' into a new variable called $wholename. 
+Then print out the $wholename. 
+Ans]
+ firstname='kedar'
+lastname='bole'
+wholename =firstname+lastname
+print(wholename)
+
+or
+
+firstname='s1'
+lastnmae='s2'
+k="".join([firstname,lastnmae])
+print(k)
+
+
+5] Write a program to accept an input string from the user and toggle the character cases.
+ For example, $str=” Hello How Are You?” O/p : hELLO hOW aRE yOU 
+Ans]
+a=input('enter your string here:')
+print(a.swapcase())
+
+
+
+l, u, s, d = 0, 0, 0, 0
+p = input()
+if (9< len(p) <= 15):
+for i in p:
+ 
+if (i.islower()):
+ l=l+1
+ 
+if (i.isupper()):
+ u=u+1
+ 
+if (i.isdigit()):
+ d=d+1
+ 
+if (i=='@'or i=='$' or i=='#'):
+ s=s+1
+if (l>=1 and u>=1 and s>=1 and d>=1 and l+s+u+d==len(p)):
+print("Valid Password")
+else:
+print("Invalid Password, Enter a new one")
+
+6]Write a program which will perform sum and multiplication,
+that sums and multiplies (respectively) all the numbers in a list of numbers.
+For example, sum([1, 2, 3, 4]) should return 10, and multiply([1, 2, 3, 4]) should return 24.
